@@ -1,0 +1,8 @@
+{
+  "name": "Aura Portfolio",
+  "description": "A soothing, high-aesthetic minimalist portfolio featuring a Gemini-powered creative assistant and smooth motion design.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
