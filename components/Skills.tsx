@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
               {cat.skills.map((skill, sIdx) => (
                 <div 
                   key={sIdx} 
-                  className="group flex flex-col items-center space-y-2 p-4 glass rounded-lg border border-transparent transition-all duration-500"
+                  className="group flex flex-col items-center space-y-2 p-4 transition-all duration-500"
                 >
                   <img 
                     src={skill.image} 

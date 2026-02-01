@@ -2,7 +2,11 @@
 import React from 'react';
 import { experiences } from '../constants';
 
-const Experience: React.FC = () => {
+interface ExperienceProps {
+  darkMode?: boolean;
+}
+
+const Experience: React.FC<ExperienceProps> = ({ darkMode = false }) => {
   return (
     <div className="space-y-16">
       <div className="flex items-center space-x-4">
@@ -16,10 +20,10 @@ const Experience: React.FC = () => {
             <div className="md:col-span-3 space-y-4">
               <div className="text-xs uppercase tracking-widest text-gray-400 pt-1">{exp.date}</div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 glass rounded-lg flex items-center justify-center p-2 border border-gray-100 grayscale group-hover:grayscale-0 transition-all duration-700 flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center p-2 grayscale group-hover:grayscale-0 transition-all duration-700 flex-shrink-0">
                   <img src={exp.img} alt={exp.company} className="max-w-full max-h-full object-contain" />
                 </div>
-                <span className="text-sm font-medium text-gray-600">{exp.company}</span>
+                <span className={`text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{exp.company}</span>
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
@@ -28,12 +32,12 @@ const Experience: React.FC = () => {
                   {exp.role}
                 </h3>
               </div>
-              <p className="text-gray-500 font-light leading-relaxed max-w-2xl">
+              <p className={`font-light leading-relaxed max-w-2xl ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                 {exp.desc}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {exp.skills.map((skill) => (
-                  <span key={skill} className="text-[8px] uppercase tracking-[0.2em] px-3 py-1 bg-gray-50 text-gray-400 rounded-full border border-gray-100">
+                  <span key={skill} className={`text-[8px] uppercase tracking-[0.2em] px-3 py-1 rounded-full border ${darkMode ? 'bg-gray-800 text-gray-400 border-gray-700' : 'bg-gray-50 text-gray-400 border-gray-100'}`}>
                     {skill}
                   </span>
                 ))}

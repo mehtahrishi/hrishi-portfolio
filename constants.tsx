@@ -495,7 +495,7 @@ export const volunteer = [
     organization: "Google Cloud Skills Boost",
     date: "March 2025 - Present",
     desc: "Focusing on personal growth through innovative problem-solving, learning cutting-edge cloud technologies, and fostering engagement within the tech community.",
-    img: "https://yt3.googleusercontent.com/1a3sAZKZj0xtTNPJCta6_MQ1wWfsjK2URS1S5bL_NJdDcYxLotkg4tWmlC1lz-K8kULyz2zHlUA=s900-c-k-c0x00ffffff-no-rj",
+    img: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/googlecloud/googlecloud-original.svg",
     skills: ["Learning", "Innovation", "Community Engagement"],
   },
   {
@@ -504,7 +504,7 @@ export const volunteer = [
     organization: "AWS Community",
     date: "June 2024 - Present",
     desc: "Drive community engagement by creating in-depth technical content (blog posts, videos, and tutorials) focused on AWS cloud technologies, sharing expertise, and providing direct feedback to AWS product teams.",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCM9ZADfoUBRVaHjje-Gf4VSrNbAjDzEmEWw&s",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
     skills: ["Innovation", "Education"],
   },
   {
@@ -513,7 +513,7 @@ export const volunteer = [
     organization: "GitHub",
     date: "2024 - Present",
     desc: "Contributing to open source projects, collaborating with developers worldwide, and sharing knowledge through code. Building and maintaining repositories that help the developer community solve real-world problems.",
-    img: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    img: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/github/github-original.svg",
     skills: ["Open Source", "Collaboration", "Development"],
   }
 ];
