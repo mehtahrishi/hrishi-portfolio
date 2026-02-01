@@ -1,94 +1,134 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { projects, Bio } from '../constants';
 
 interface ProjectGridProps {
   onNavigate: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
+  darkMode?: boolean;
 }
 
-const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate }) => {
+const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 600; // Approx card width
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'right' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="space-y-16">
-      <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-100 pb-8">
-        <div className="space-y-2">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Portfolio</span>
-          <h2 className="text-4xl md:text-6xl serif">Selected Works</h2>
+    <div className="space-y-12">
+      {/* Header & Controls */}
+      {/* Header & Controls */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-4 flex-grow mr-8">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Selected Works</span>
+          <div className="h-[1px] flex-grow bg-gray-100"></div>
         </div>
-        <div className="mt-4 md:mt-0 text-gray-400 text-xs uppercase tracking-[0.2em] font-medium">
-          Innovation & Deployment
+
+        {/* Navigation Buttons for Desktop */}
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={() => scroll('left')}
+            className={`w-10 h-10 flex items-center justify-center rounded-full border transition-all ${darkMode ? 'border-gray-800 hover:bg-white hover:text-black text-gray-400' : 'border-gray-200 hover:bg-black hover:text-white text-gray-400'}`}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className={`w-10 h-10 flex items-center justify-center rounded-full border transition-all ${darkMode ? 'border-gray-800 hover:bg-white hover:text-black text-gray-400' : 'border-gray-200 hover:bg-black hover:text-white text-gray-400'}`}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" /></svg>
+          </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
-        {projects.map((project, index) => (
-          <div 
-            key={project.id} 
-            className={`group ${index % 2 !== 0 ? 'md:mt-32' : ''}`}
+      {/* Carousel Container */}
+      <div
+        ref={scrollContainerRef}
+        className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-12 scrollbar-none"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="flex-none w-[90vw] md:w-[600px] snap-center group"
           >
-            <div className="overflow-hidden relative aspect-[16/9] bg-[#f2f1ef] mb-8 border border-gray-100 rounded-sm">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-700 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                 <div className="flex space-x-4">
-                   <a 
-                    href={project.webapp} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="px-6 py-2 bg-white text-black text-[9px] uppercase tracking-widest font-bold shadow-xl hover:bg-black hover:text-white transition-all"
-                   >
-                     Live Demo
-                   </a>
-                   <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="px-6 py-2 border border-white text-white text-[9px] uppercase tracking-widest font-bold backdrop-blur-md hover:bg-white hover:text-black transition-all"
-                   >
-                     Source
-                   </a>
-                 </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="flex items-start justify-between">
-                <div className="space-y-1">
-                  <h3 className="text-3xl serif leading-none">{project.title}</h3>
-                  <div className="flex items-center space-x-3">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400">{project.category}</p>
-                    <span className="w-1 h-1 bg-gray-200 rounded-full"></span>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-gray-300 font-medium">{project.date}</p>
-                  </div>
+            {/* Card Content */}
+            <div className="flex flex-col space-y-8">
+              {/* Image Area */}
+              <div className={`relative aspect-[16/10] overflow-hidden rounded-sm transition-all duration-500 ${darkMode ? 'bg-gray-800/50' : 'bg-[#f2f1ef]'}`}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                />
+
+                {/* Overlay on Image Hover */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
+                  <a
+                    href={project.webapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3 bg-white text-black text-[10px] uppercase tracking-widest font-bold hover:bg-black hover:text-white transition-all transform hover:scale-105"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-full hover:bg-white hover:text-black transition-all"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.158-1.11-1.158-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z" />
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <p className="text-gray-500 font-light text-sm leading-relaxed max-w-sm">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 pt-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className="text-[9px] uppercase tracking-[0.2em] text-gray-300 font-medium border-b border-gray-100 hover:text-gray-400 transition-colors">#{tag}</span>
-                ))}
+
+              {/* Text Content */}
+              <div className="space-y-4 pr-8">
+                <div className="flex justify-between items-baseline border-b pb-4 transition-colors duration-300 border-gray-100 dark:border-gray-800">
+                  <div className="flex items-center space-x-3">
+                    <span className={`text-[10px] uppercase tracking-[0.3em] font-medium ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                      {project.category}
+                    </span>
+                  </div>
+                  <span className={`text-[10px] font-mono opacity-50 ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                    {project.date}
+                  </span>
+                </div>
+
+                <h3 className={`text-3xl serif leading-tight transition-colors duration-300 ${darkMode ? 'text-white' : 'text-black'}`}>
+                  {project.title}
+                </h3>
+
+                <p className={`text-sm leading-relaxed line-clamp-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.tags.slice(0, 4).map(tag => (
+                    <span
+                      key={tag}
+                      className={`text-[9px] uppercase tracking-wider px-3 py-1.5 rounded-sm border transition-colors duration-300 ${darkMode ? 'border-gray-800 text-gray-500' : 'border-gray-200 text-gray-500'}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="pt-24 text-center">
-        {/* Fix: Bio was missing from imports. Added Bio to the import statement above and used Bio.github here. */}
-        <a 
-          href={Bio.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group text-[10px] uppercase tracking-[0.4em] font-bold inline-flex items-center space-x-6 hover:text-gray-400 transition-colors"
-        >
-          <span>View All Repository</span>
-          <span className="w-12 h-[1px] bg-black group-hover:w-16 transition-all"></span>
-        </a>
-      </div>
+
     </div>
   );
 };

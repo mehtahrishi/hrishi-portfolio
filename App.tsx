@@ -196,7 +196,7 @@ const App: React.FC = () => {
         </section>
 
         <section id="work" className="scroll-mt-32">
-          <ProjectGrid onNavigate={handleAnchorClick} />
+          <ProjectGrid onNavigate={handleAnchorClick} darkMode={darkMode} />
         </section>
 
         <section id="experience" className="scroll-mt-32">
