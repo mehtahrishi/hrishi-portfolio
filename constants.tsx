@@ -13,6 +13,8 @@ export const Bio = {
     "As a highly adaptable and results-driven professional, I bring a robust blend of expertise in Full-stack Development, Cloud DevOps Engineering, Software Testing, Cyber Security Enthusiast and AI/ML Engineering. My core focus is on architecting, building, and securing high-quality, scalable applications and secure infrastructure that drive innovation and deliver tangible business value.",
   github: "https://github.com/mehtahrishi",
   resume: "https://drive.google.com/file/d/1VICb4yW26SG8QopToJE-7AV12A7UEzyU/view?usp=drive_link",
+  resumeSD: "/Hrishi_Mehta_SD_SE_Resume.pdf",
+  resumeAIML: "/resume-aiml.pdf",
   linkedin: "https://www.linkedin.com/in/hrishi-mehta-889732256/",
   insta: "https://www.instagram.com/_mehtahrishi/",
   Mail: "mailto:mehtahrishi45@gmail.com",
@@ -68,15 +70,11 @@ export const skills = [
     skills: [
       {
         name: "Neo4j",
-        image: "https://raw.githubusercontent.com/deepset-ai/haystack-integrations/main/logos/neo4j.png",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original.svg",
       },
       {
         name: "MongoDB",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mongodb/mongodb-original.svg",
-      },
-      {
-        name: "Neon",
-        image: "https://ml.globenewswire.com/Resource/Download/82e79fc7-1654-41e7-af70-f5857596743c",
       },
       {
         name: "PostgreSQL",
@@ -94,10 +92,6 @@ export const skills = [
         name: "Drizzle ORM",
         image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAByElEQVR4AeyUzStEYRTGX0IUSkSkFGFlJRIpWdgRJZKVshBRSpTymRIlH1kqko2/QHYkUcRCykL5SCg2QpLE75nu1fUx18wkC2Z6fuecO+d957n33LcJNb/8CRr++MCDI/2/I63g0ZchGb5TGgsWoRZMIIcmlY36gTJyOnynORbUQBEEZDjKxkjYhHVwUyXNEniCMfDbsIBNdSA1K7gQTm8CJOUTFW4jTWJBPDg1aV3Mk3fBVhhFNjjVxoXe3zV5EDzyZphD9wiWwFY9RT48QBfYCqHQaPfJWSAlEPpA6ibcgUfeDDWCKFY8gxRBGAFpmHAJthopdCMy1rvi0sgshmIPZuBNXxmW0y0FqUMBUixOyTo0JI+iiUMgTRM0FZLJUwCN9YX8po+GetHjVneBrFGRzLExJheK4RFs9VAkwhX0gq1qCpmukN/po2Er3Qy4hU5wSodET2h/pwPRbl3ond5YtdIZYRs+yWkYR1ezJ5kBwgW4SZPQRLZYNAs+yWnYwo5YOIApcFMmzSqQmhR8xWm4xqZDaAD7tFF+qXO+3QBNYofss5yGq+zSnesvi9JV93QLoR/8ktPQr42BLg4aBjo5r/v+/khfAQAA//+p3xSIAAAABklEQVQDAPNRRDmE35SpAAAAAElFTkSuQmCC"
       },
-      {
-        name: "NocoDB",
-        image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/nocodb.webp"
-      }
     ],
   },
   {
@@ -119,29 +113,17 @@ export const skills = [
         name: "Express JS",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
       },
-    ],
-  },
-  {
-    title: "Security Tools",
-    skills: [
       {
-        name: "Nmap",
-        image: "https://img.icons8.com/color/600/nmap.png",
+        name: "Puppeteer",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/puppeteer/puppeteer-original.svg",
       },
       {
-        name: "Wireshark",
-        image: "https://img.icons8.com/?size=100&id=rOHcpTUtCTjr&format=png&color=000000",
-      },
-      {
-        name: "Metasploit",
-        image: "https://img.icons8.com/?size=100&id=PW0ChfedZvTh&format=png&color=000000",
-      },
-      {
-        name: "Kali Linux",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kalilinux/kalilinux-original.svg",
+        name: "Postman",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
       },
     ],
   },
+ 
   {
     title: "Dev Operations",
     skills: [
@@ -151,7 +133,7 @@ export const skills = [
       },
       {
         name: "GitHub",
-        image: "https://www.freeiconspng.com/thumbs/github-icon/github-icon-9.png",
+        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/github/github-original.svg",
       },
       {
         name: "Docker",
@@ -177,78 +159,40 @@ export const skills = [
         name: "GCP",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/googlecloud/googlecloud-original.svg",
       },
-      {
-        name: "Oracle",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg",
-      },
-      {
-        name: "Apache",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/apache/apache-original.svg",
-      },
+      
+     
       {
         name: "Linux",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/linux/linux-original.svg",
       },
-      {
-        name: "Prometheus",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/prometheus/prometheus-original.svg",
-      },
-      {
-        name: "Grafana",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/grafana/grafana-original.svg",
-      },
-      {
-        name: "Ansible",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/ansible/ansible-original.svg",
-      },
-      {
-        name: "Jenkins",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/jenkins/jenkins-original.svg",
-      },
-      {
-        name: "Redis",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/redis/redis-original.svg",
-      },
     ],
   },
   {
-    title: "Testing & AI Tools",
+    title: "AI/ML",
     skills: [
       {
-        name: "Selenium",
-        image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/selenium/selenium-original.svg",
+        name: "PyTorch",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
       },
       {
-        name: "Playwright",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg",
+        name: "TensorFlow",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
       },
       {
-        name: "Postman",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+        name: "Scikit-learn",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
       },
       {
-        name: "Co Pilot",
-        image: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-white-icon.png",
+        name: "Pandas",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
       },
       {
-        name: "Amazon Q",
-        image: "https://d1.awsstatic.com/getting-started-guides/learning/amazon-q/icon_amazon-q.a5c38564734b6e9f611e9599eb271142389313a4.png",
+        name: "NumPy",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
       },
       {
-        name: "Qodo Gen",
-        image: "https://codium.gallerycdn.vsassets.io/extensions/codium/codium/1.5.2/1749997980233/Microsoft.VisualStudio.Services.Icons.Default",
-      },
-      {
-        name: "Cursor",
-        image: "https://img.icons8.com/fluent/512/cursor-ai.png",
-      },
-      {
-        name: "Kiro",
-        image: "https://www.techspot.com/images2/downloads/topdownload/2025/07/2025-07-14-ts3_thumbs-d25.png",
-      },
-      {
-        name: "Gemini",
-        image: "https://brandlogos.net/wp-content/uploads/2025/03/gemini_icon-logo_brandlogos.net_aacx5-300x300.png",
+        name: "Matplotlib",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg",
       },
     ],
   },
@@ -347,27 +291,10 @@ export const education = [
     school: "University of Mumbai",
     date: "2022 - 2025",
     grade: "A",
-    desc: "Bachelor of Information Technology, University of Mumbai. Coursework included Web Development, Cybersecurity, Networking, Cloud Development, and Database Management Systems.",
+    desc: "Bachelor of Information Technology, University of Mumbai.\nCoursework included Web Development, Cybersecurity, Networking, Cloud Development, and Database Management Systems.",
     degree: "Bachelor of Science (B.Sc), Information Technology",
   },
-  {
-    id: 1,
-    img: "https://www.mahahsscboard.in/LogoBord.png",
-    school: "Maharashtra State Board Of Secondary And Higher Secondary Education",
-    date: "2022",
-    grade: "A",
-    desc: "Senior Secondary Education (XII) – Commerce with IT & Mathematics | Matruchhaya Junior College, Maharashtra State Board.",
-    degree: "Senior Secondary (XII), Commerce",
-  },
-  {
-    id: 2,
-    img: "https://www.mahahsscboard.in/LogoBord.png",
-    school: "Maharashtra State Board Of Secondary And Higher Secondary Education",
-    date: "2020",
-    grade: "A",
-    desc: "Secondary Education (X), St Paul's High School, Maharashtra State Board",
-    degree: "Secondary (X), Science",
-  },
+ 
 ];
 
 export const projects = [
@@ -572,15 +499,6 @@ export const volunteer = [
     skills: ["Learning", "Innovation", "Community Engagement"],
   },
   {
-    index: 1,
-    role: "Member",
-    organization: "DLLE, Mumbai University (Department Of Lifelong Learning and Extension)",
-    date: "June 2024 - May 2025",
-    desc: "Supporting lifelong learning programs by mentoring others and advancing educational accessibility and community development.",
-    img: "https://www.mudlle.ac.in/wp-content/uploads/2022/01/cropped-DLLE-Logo.jpeg",
-    skills: ["Mentorship", "Education"],
-  },
-  {
     index: 2,
     role: "Community Builder",
     organization: "AWS Community",
@@ -588,13 +506,24 @@ export const volunteer = [
     desc: "Drive community engagement by creating in-depth technical content (blog posts, videos, and tutorials) focused on AWS cloud technologies, sharing expertise, and providing direct feedback to AWS product teams.",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCM9ZADfoUBRVaHjje-Gf4VSrNbAjDzEmEWw&s",
     skills: ["Innovation", "Education"],
+  },
+  {
+    index: 3,
+    role: "Open Source Contributor",
+    organization: "GitHub",
+    date: "2024 - Present",
+    desc: "Contributing to open source projects, collaborating with developers worldwide, and sharing knowledge through code. Building and maintaining repositories that help the developer community solve real-world problems.",
+    img: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    skills: ["Open Source", "Collaboration", "Development"],
   }
 ];
 
 export const NAV_LINKS = [
+  { name: 'About', href: '#about' },
   { name: 'Work', href: '#work' },
   { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
-  { name: 'About', href: '#about' },
+  { name: 'Education', href: '#education' },
+  { name: 'Volunteer', href: '#volunteer' },
   { name: 'Contact', href: '#contact' },
 ];

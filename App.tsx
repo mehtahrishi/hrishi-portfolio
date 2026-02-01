@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import ResumeDock from './components/ResumeDock';
 import Education from './components/Education';
 import Volunteer from './components/Volunteer';
 
@@ -123,28 +124,13 @@ const App: React.FC = () => {
 
       {/* Main Content Flow */}
       <main ref={mainRef} className="max-w-7xl mx-auto px-6 md:px-12 space-y-48 py-32">
-        <section id="work" className="scroll-mt-32">
-          <ProjectGrid onNavigate={handleAnchorClick} />
-        </section>
-
-        <section id="experience" className="scroll-mt-32">
-          <Experience />
-        </section>
-
-        <section id="skills" className="scroll-mt-32">
-          <Skills />
-        </section>
-
         <section id="about" className="scroll-mt-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-10">
               <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Professional Profile</span>
               <h2 className="text-5xl md:text-6xl serif leading-[1.1]">Architecting <span className="italic">Quality</span> through Adaptability.</h2>
               <p className="text-xl text-gray-600 leading-relaxed font-light italic">
-                "{Bio.description.slice(0, 75)}..."
-              </p>
-              <p className="text-lg text-gray-500 leading-relaxed font-light">
-                {Bio.description}
+                "As a highly adaptable and results-driven professional, I bring a robust blend of expertise in Full-stack Development, Cloud DevOps Engineering, Software Testing, Cyber Security Enthusiast and AI/ML Engineering. My core focus is on architecting, building, and securing high-quality, scalable applications and secure infrastructure that drive innovation and deliver tangible business value."
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a 
@@ -177,6 +163,18 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        <section id="work" className="scroll-mt-32">
+          <ProjectGrid onNavigate={handleAnchorClick} />
+        </section>
+
+        <section id="experience" className="scroll-mt-32">
+          <Experience />
+        </section>
+
+        <section id="skills" className="scroll-mt-32">
+          <Skills />
+        </section>
+
         <section id="education" className="scroll-mt-32">
           <Education />
         </section>
@@ -195,6 +193,7 @@ const App: React.FC = () => {
       </main>
 
       <Footer onNavigate={handleAnchorClick} />
+      <ResumeDock />
     </div>
   );
 };

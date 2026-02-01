@@ -4,28 +4,34 @@ import { education } from '../constants';
 
 const Education: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-20 bg-white/30 rounded-3xl p-8 backdrop-blur-sm border border-white/50">
-      <div className="space-y-6">
+    <div className="space-y-16">
+      <div className="flex items-center space-x-4">
         <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Academic</span>
-        <h2 className="text-4xl serif italic leading-tight">Foundation of <br/>Engineering Excellence</h2>
-        <p className="text-gray-400 text-sm font-light max-w-xs leading-relaxed">
-          Broadening horizons through structured learning and technical rigor.
-        </p>
+        <div className="h-[1px] flex-grow bg-gray-100"></div>
       </div>
-      <div className="space-y-12">
+      
+      <div className="space-y-20">
         {education.map((edu) => (
-          <div key={edu.id} className="flex space-x-6 group">
-            <div className="flex-shrink-0 w-16 h-16 glass rounded-xl border border-gray-100 flex items-center justify-center p-2 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src={edu.img} alt={edu.school} className="max-w-full max-h-full object-contain" />
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between items-center">
-                <div className="text-[10px] text-gray-400 uppercase tracking-widest">{edu.date}</div>
-                <div className="text-[10px] font-bold text-black border border-black px-2 py-0.5 rounded">Grade {edu.grade}</div>
+          <div key={edu.id} className="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+            <div className="md:col-span-3 space-y-4">
+              <div className="text-xs uppercase tracking-widest text-gray-400 pt-1">{edu.date}</div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 glass rounded-lg flex items-center justify-center p-2 border border-gray-100 grayscale group-hover:grayscale-0 transition-all duration-700 flex-shrink-0">
+                  <img src={edu.img} alt={edu.school} className="max-w-full max-h-full object-contain" />
+                </div>
+                <span className="text-sm font-medium text-gray-600">{edu.school}</span>
               </div>
-              <h4 className="text-xl serif">{edu.school}</h4>
-              <p className="text-sm text-gray-500 font-light">{edu.degree}</p>
-              <p className="text-xs text-gray-400 italic font-light">{edu.desc}</p>
+            </div>
+            <div className="md:col-span-9 space-y-4">
+              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between">
+                <h3 className="text-2xl serif transition-all duration-300">
+                  {edu.degree}
+                </h3>
+                <div className="text-[10px] font-bold text-black border border-black px-2 py-0.5 rounded mt-2 md:mt-0 w-fit">Grade {edu.grade}</div>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed max-w-2xl whitespace-pre-line">
+                {edu.desc}
+              </p>
             </div>
           </div>
         ))}

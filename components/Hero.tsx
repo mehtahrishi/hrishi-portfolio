@@ -64,11 +64,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </a>
         </div>
       </div>
-
-      {/* Side Label */}
-      <div className="hidden lg:block absolute left-12 bottom-12 rotate-[-90deg] origin-left text-[9px] uppercase tracking-[0.6em] text-gray-300 font-medium">
-        Precision & Automation
-      </div>
     </section>
   );
 };

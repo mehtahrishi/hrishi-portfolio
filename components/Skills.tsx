@@ -4,7 +4,12 @@ import { skills } from '../constants';
 
 const Skills: React.FC = () => {
   return (
-    <div className="py-20 border-t border-gray-100">
+    <div className="space-y-16">
+      <div className="flex items-center space-x-4">
+        <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Technical Expertise</span>
+        <div className="h-[1px] flex-grow bg-gray-100"></div>
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         {skills.map((cat, idx) => (
           <div key={idx} className="space-y-8">
@@ -13,7 +18,7 @@ const Skills: React.FC = () => {
               {cat.skills.map((skill, sIdx) => (
                 <div 
                   key={sIdx} 
-                  className="group flex flex-col items-center space-y-2 p-4 glass rounded-lg border border-transparent hover:border-gray-200 transition-all duration-500"
+                  className="group flex flex-col items-center space-y-2 p-4 glass rounded-lg border border-transparent transition-all duration-500"
                 >
                   <img 
                     src={skill.image} 

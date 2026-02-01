@@ -15,16 +15,18 @@ const Experience: React.FC = () => {
           <div key={exp.id} className="grid grid-cols-1 md:grid-cols-12 gap-8 group">
             <div className="md:col-span-3 space-y-4">
               <div className="text-xs uppercase tracking-widest text-gray-400 pt-1">{exp.date}</div>
-              <div className="w-12 h-12 glass rounded-lg flex items-center justify-center p-2 border border-gray-100 grayscale group-hover:grayscale-0 transition-all duration-700">
-                <img src={exp.img} alt={exp.company} className="max-w-full max-h-full object-contain" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 glass rounded-lg flex items-center justify-center p-2 border border-gray-100 grayscale group-hover:grayscale-0 transition-all duration-700 flex-shrink-0">
+                  <img src={exp.img} alt={exp.company} className="max-w-full max-h-full object-contain" />
+                </div>
+                <span className="text-sm font-medium text-gray-600">{exp.company}</span>
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between">
-                <h3 className="text-2xl serif group-hover:italic transition-all duration-300">
-                  {exp.company}
+                <h3 className="text-2xl serif transition-all duration-300">
+                  {exp.role}
                 </h3>
-                <span className="text-sm font-medium text-gray-500">{exp.role}</span>
               </div>
               <p className="text-gray-500 font-light leading-relaxed max-w-2xl">
                 {exp.desc}
