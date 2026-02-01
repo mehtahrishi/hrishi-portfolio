@@ -130,13 +130,13 @@ const App: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-[55] glass transition-all duration-700 md:hidden flex flex-col justify-center items-center space-y-8 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`fixed inset-0 z-[55] transition-all duration-700 md:hidden flex flex-col justify-center items-center space-y-8 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} ${darkMode ? 'bg-gray-900/95 backdrop-blur-xl' : 'glass'}`}>
         {NAV_LINKS.map((link) => (
           <a
             key={link.name}
             href={link.href}
             onClick={(e) => handleAnchorClick(e, link.href)}
-            className="text-2xl serif italic hover:text-gray-400 transition-colors"
+            className={`text-2xl serif italic transition-colors ${darkMode ? 'text-white hover:text-gray-400' : 'text-black hover:text-gray-500'}`}
           >
             {link.name}
           </a>
@@ -144,7 +144,7 @@ const App: React.FC = () => {
         <a
           href="#contact"
           onClick={(e) => handleAnchorClick(e, '#contact')}
-          className="px-10 py-4 bg-black text-white text-[10px] uppercase tracking-widest"
+          className={`px-10 py-4 text-[10px] uppercase tracking-widest transition-colors ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'}`}
         >
           Connect Now
         </a>
@@ -182,11 +182,11 @@ const App: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden group rounded-sm shadow-sm border border-gray-100">
+            <div className="relative aspect-[3/4] w-full max-w-sm mx-auto overflow-hidden group rounded-sm shadow-sm border border-gray-100">
               <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop"
-                alt="Technology Space"
-                className="w-full h-full object-cover grayscale transition-all duration-1000 scale-105 group-hover:scale-100"
+                src="/profile.jpg"
+                alt="Hrishi Mehta"
+                className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                 <span className="text-white text-[10px] uppercase tracking-[0.5em] border border-white px-6 py-3">DevOps & Full Stack</span>
