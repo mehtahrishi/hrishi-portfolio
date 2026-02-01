@@ -6,13 +6,12 @@ export const Bio = {
   roles: [
     "Full Stack Developer",
     "AI/ML Engineer",
-    "DevOps Engineer",
+    // "DevOps Engineer",
     "Automation Tester",
   ],
   description:
     "As a highly adaptable and results-driven professional, I bring a robust blend of expertise in Full-stack Development, Cloud DevOps Engineering, Software Testing, Cyber Security Enthusiast and AI/ML Engineering. My core focus is on architecting, building, and securing high-quality, scalable applications and secure infrastructure that drive innovation and deliver tangible business value.",
   github: "https://github.com/mehtahrishi",
-  resume: "https://drive.google.com/file/d/1VICb4yW26SG8QopToJE-7AV12A7UEzyU/view?usp=drive_link",
   resumeSD: "/Hrishi_Mehta_SD_SE_Resume.pdf",
   resumeAIML: "/resume-aiml.pdf",
   linkedin: "https://www.linkedin.com/in/hrishi-mehta-889732256/",
@@ -59,8 +58,8 @@ export const skills = [
         name: "Bootstrap",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/bootstrap/bootstrap-original.svg",
       },
-      { 
-        name: "Tailwind CSS", 
+      {
+        name: "Tailwind CSS",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/tailwindcss/tailwindcss-original.svg",
       },
     ],
@@ -123,7 +122,7 @@ export const skills = [
       },
     ],
   },
- 
+
   {
     title: "Dev Operations",
     skills: [
@@ -159,8 +158,8 @@ export const skills = [
         name: "GCP",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/googlecloud/googlecloud-original.svg",
       },
-      
-     
+
+
       {
         name: "Linux",
         image: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/linux/linux-original.svg",
@@ -294,7 +293,7 @@ export const education = [
     desc: "Bachelor of Information Technology, University of Mumbai.\nCoursework included Web Development, Cybersecurity, Networking, Cloud Development, and Database Management Systems.",
     degree: "Bachelor of Science (B.Sc), Information Technology",
   },
- 
+
 ];
 
 export const projects = [
@@ -303,7 +302,7 @@ export const projects = [
     title: "IP Tracker",
     date: "April 2025",
     description: "Developed IP Tracker, a Python Flask application designed for real-time visitor insight, demonstrating IP address detection and User-Agent parsing. Engineered the backend to accurately reveal client details including browser, operating system, and device information, with visitor data securely logged. Built a modern, clean user interface using HTML5, CSS (incorporating Glassmorphism styling), and JavaScript for instant display of analysis results. Showcases expertise in web development, data extraction, and creating intuitive, aesthetically pleasing user experiences for analytical tools.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533363/Screenshot_2025-04-06_211536_dsu9f0.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533363/Screenshot_2025-04-06_211536_dsu9f0.png",
     tags: ["HTML5", "CSS", "JavaScript", "Python", "Flask"],
     category: "web app",
     github: "https://github.com/mehtahrishi/ip-tracker",
@@ -336,7 +335,7 @@ export const projects = [
     title: "Task Manager",
     date: "April 2025",
     description: "Developed a Task Manager application leveraging Python (Flask), uniquely integrating a Neo4j graph database for secure and efficient task storage and management. Implemented robust user authentication with Flask-Login, providing secure login and registration functionalities for personalized task management. Designed a sleek, modern user interface using HTML5, CSS (featuring Glassmorphism styling), and JavaScript for an intuitive and visually appealing experience. Enabled core functionalities including task creation, editing, and deletion, with optimized querying of tasks from Neo4j, and deployed the application on Render using Procfile for online accessibility.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533364/Screenshot_2025-04-06_025755_nl7vzd.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533364/Screenshot_2025-04-06_025755_nl7vzd.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Flask Login", "Render", "Neo4j", "Procfile"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Task-App",
@@ -347,7 +346,7 @@ export const projects = [
     title: "QR Generator",
     date: "April 2025",
     description: "Developed an Instant QR Code Generator, a web application designed to convert text or links into scannable QR codes rapidly and securely. Engineered the backend using Python (Flask), implementing efficient QR code generation logic. Built a user-friendly interface with HTML5, CSS, and JavaScript for seamless input and instant display of generated QR codes. Utilized Procfile for deployment readiness, ensuring a fast, secure, and reliable solution for sharing information via simple scans.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533366/image_4_nefrzu.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533366/image_4_nefrzu.png",
     tags: ["HTML5", "CSS", "JavaScript", "Python", "Flask", "Procfile", "QR"],
     category: "web app",
     github: "https://github.com/mehtahrishi/QR--Generator",
@@ -358,7 +357,7 @@ export const projects = [
     title: "AI CoAgent",
     date: "April 2025",
     description: "Developed AI CoAgent, an AI-powered web application designed as an offline-ready coding companion for developers and learners. Engineered the intelligent backend using Python (Flask), integrating the Groq API for lightning-fast, real-time AI responses to natural language queries. Implemented features for code explanations and troubleshooting assistance, showcasing expertise in AI integration and efficient backend processing. Built a sleek, user-friendly interface with HTML5, CSS, and JavaScript, ensuring secure and efficient response rendering, with Procfile for deployment readiness.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533365/image_3_vajhh0.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533365/image_3_vajhh0.png",
     tags: ["HTML5", "CSS", "JavaScript", "Python", "Flask", "Procfile", "Groq"],
     category: "web app",
     github: "https://github.com/mehtahrishi/CoAgent",
@@ -369,7 +368,7 @@ export const projects = [
     title: "Spam Detector",
     date: "April 2025",
     description: "Developed a high-accuracy Spam Detection System designed to filter unwanted emails and SMS messages using advanced Machine Learning (ML) and Deep Learning (DL) algorithms. Engineered the robust backend with Python (Flask), leveraging Scikit-learn and TensorFlow for model training, deployment, and real-time classification. Designed a sleek, modern user interface using HTML5, CSS (incorporating Glassmorphism for aesthetic appeal), and JavaScript for interactive functionalities. Implemented features for real-time integration with communication platforms and enabled user customization of filtering preferences to enhance detection efficacy.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533366/Screenshot_2025-05-02_031141_r771s0.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533366/Screenshot_2025-05-02_031141_r771s0.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Scikit-learn", "TensorFlow", "ML", "DL"],
     category: "machine learning",
     github: "https://github.com/mehtahrishi/Spam-Detector",
@@ -380,7 +379,7 @@ export const projects = [
     title: "Nami Voice Assistant",
     date: "May 2025",
     description: "Developed Nami Voice Assistant, a modern web application providing a Siri-like voice experience through integrated speech recognition and synthesis. Engineered the robust backend using Python (Flask), implementing a rule-based AI system with an AI API (e.g., OpenRouter) fallback for intelligent user input processing and response generation. Utilized HTML5, CSS, and JavaScript for a responsive and intuitive frontend, leveraging the Web Speech API for seamless voice interaction. Designed the application for efficient natural language understanding and dynamic response delivery, showcasing expertise in AI integration and user interface development.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746532838/image_nxnjh4.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746532838/image_nxnjh4.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "AI API", "Web Speech API", "OpenRouter"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Voice-Assistant-App",
@@ -391,7 +390,7 @@ export const projects = [
     title: "Alien Interview Simulator",
     date: "May 2025",
     description: "Developed an interactive Alien Interview Simulator, a web application designed to simulate technical interviews across various tech domains with a unique retro sci-fi aesthetic. Engineered the frontend using HTML5, CSS, and JavaScript, incorporating ASCII Art, animated space backgrounds, and a CRT Screen Effect for an immersive user experience. Built the backend with Python and Flask, implementing RESTful APIs for dynamic content delivery and managing Q&A sessions and coding challenges. Utilized JSON for efficient data structuring and communication between the frontend and backend, ensuring seamless interaction during simulated interviews.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746532860/Screenshot_2025-05-06_170533_kc6hqf.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746532860/Screenshot_2025-05-06_170533_kc6hqf.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "ASCII Art", "Retro Space Theme", "CRT Screen Effect", "JSON", "RESTful API"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Alien-Interview-Simulator",
@@ -402,7 +401,7 @@ export const projects = [
     title: "Suho PDF Reader",
     date: "May 2025",
     description: "Developed Suho PDF Reader, a sophisticated AI-powered PDF analysis tool designed for smart document classification and detailed summarization. Engineered the core intelligence leveraging the Llama 3 model via Groq's API implementation for high-quality analysis, ensuring privacy by processing files locally without permanent storage. Built the backend with Python (Flask), implementing RESTful APIs for efficient data handling and utilizing JSON for structured communication. Designed a modern glassmorphic user interface using HTML5, CSS, and JavaScript, featuring intuitive drag-and-drop file upload for seamless usability.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1747428966/Screenshot_2025-05-17_014519_ka3rpf.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1747428966/Screenshot_2025-05-17_014519_ka3rpf.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "JSON", "RESTful API", "Groq", "Llama 3"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Suho-Pdf-Reader",
@@ -413,7 +412,7 @@ export const projects = [
     title: "Curr AI Agent",
     date: "May 2025",
     description: "Developed Curr AI Agent, an intelligent web application enabling users to interact with PDF and PowerPoint (.pptx) documents via an AI-powered chat interface. Engineered the core intelligence using Google Gemini API and Gemini AI SDK (Large Language Model) integrated with Python (Flask), providing capabilities for Q&A, summarization, and information retrieval. Implemented a robust backend with RESTful APIs and managed user sessions securely using Redis Cloud Session Storage via Flask-Session. Utilized HTML5, CSS, and JavaScript for a responsive and intuitive user interface, with Cloudinary for efficient document and asset management.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1747774149/Screenshot_2025-05-21_021516_gjbvil.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1747774149/Screenshot_2025-05-21_021516_gjbvil.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "RESTful API", "Gemini API", "Cloudinary", "Google Generative AI", "Redis Cloud Session Storage", "Flask-Session"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Curr_Agent",
@@ -424,7 +423,7 @@ export const projects = [
     title: "Enum AI Agent",
     date: "May 2025",
     description: "Developed Enum, an intelligent web application for comprehensive website analysis, extracting core information from any provided URL, including dynamic JavaScript-rendered sites. Engineered robust web scraping functionalities using Python (Flask/Django), integrated with Gemini AI SDK and other AI Agents for advanced Natural Language Understanding (NLU) and data interpretation. Designed a sleek, modern glassmorphic UI using HTML and CSS, enhanced with JavaScript for interactive features, including a visual website snapshot and text-to-speech insights. Implemented a dedicated history section for revisiting past analyses, ensuring efficient data management and user convenience.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1748147659/Screenshot_2025-05-25_090418_xbhmye.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1748147659/Screenshot_2025-05-25_090418_xbhmye.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "RESTful API", "Gemini API", "Mongo DB", "Google Generative AI", "Gemini AI SDK"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Enum",
@@ -435,7 +434,7 @@ export const projects = [
     title: "Emoji Rumble",
     date: "June 2025",
     description: "Developed Emoji Rumble, a dynamic browser-based bullet hell survival game, leveraging HTML5 Canvas API for engaging real-time graphics and interactive gameplay. Engineered the robust backend using Python and Flask, implementing RESTful APIs for seamless data exchange and efficient game state management. Integrated MongoDB for persistent data storage, utilizing Flask-PyMongo for optimized database operations, which powered features like a global leaderboard and comprehensive player survival history. Utilized CSS for responsive styling and JavaScript for core game logic and front-end interactivity, with Cloudinary for scalable asset management.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1748982694/Screenshot_2025-06-04_020031_zsrtbj.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1748982694/Screenshot_2025-06-04_020031_zsrtbj.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "RESTful API", "MongoDB", "Flask-PyMongo", "Canvas API", "Cloudinary"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Emoji-Rumble",
@@ -446,7 +445,7 @@ export const projects = [
     title: "Skill-Surge",
     date: "June 2025",
     description: "Developed Skill-Surge, a modern, AI-enhanced web application built with Next.js and ReactJS, facilitating peer-to-peer skill exchange and learning. Engineered a robust backend using Node.js and Express.js, implementing RESTful APIs for seamless communication and data management. Leveraged Firebase Firestore for scalable data storage and Firebase Authentication for secure user management, with Cloudinary for efficient asset handling. Deployed the application on Vercel, ensuring high performance and scalability. Integrated cutting-edge AI for intelligent matchmaking, personalized skill suggestions, and an interactive chatbot to enhance the user learning journey.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1750284518/Screenshot_2025-06-10_154322_orb6tj.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1750284518/Screenshot_2025-06-10_154322_orb6tj.png",
     tags: ["NextJS", "ReactJS", "ExpressJS", "NodeJS", "TailWindCSS", "RESTful API", "Cloudinary", "Firebase Store", "Firebase Auth", "Vercel"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Skills_Surge",
@@ -457,7 +456,7 @@ export const projects = [
     title: "GlassBot",
     date: "June 2025",
     description: "Developed GlassBot, a calm and minimalist AI chatbot interface designed for tranquil, distraction-free conversations, showcasing expertise in UI/UX and conversational AI. Engineered the backend using Python (Flask), implementing RESTful APIs and integrating Natural Language Processing (NLP) and Machine Learning (ML) for intelligent response generation. Crafted an elegant glassmorphic aesthetic with HTML5, CSS (featuring smooth blur effects and soft gradients), and JavaScript for dynamic light/dark mode transitions and animated typing effects. Designed for lightweight customization and ease of maintenance, providing quick access to social links via a slide-out tray, balancing visual appeal with technical simplicity.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1751213172/Screenshot_2025-06-29_213550_fzf6gp.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1751213172/Screenshot_2025-06-29_213550_fzf6gp.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "RESTful API", "NLP", "ML"],
     category: "web app",
     github: "https://github.com/mehtahrishi/Codotech/tree/main/Chatbot-Using-NLP",
@@ -468,7 +467,7 @@ export const projects = [
     title: "Music Reccommendation System",
     date: "June 2025",
     description: "Developed Chirpify, a sleek, artist-centric music player web application designed to generate personalized playlists based on user listening habits. Engineered the intelligent backend using Python (Flask), leveraging Machine Learning (ML) algorithms with Pandas and NumPy for data processing to learn favorite artists and craft dynamic, ever-evolving playlists. Implemented RESTful APIs for seamless interaction and utilized a curated local song library, ensuring a private and efficient audio experience without external music APIs. Built a visually stunning glassmorphic UI with HTML5, CSS, and JavaScript, featuring intuitive playback controls and a Discovery Mix mode for exploring new talent, with Cloudinary for asset management.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1751204348/Screenshot_2025-06-28_165809_dfvbpd.png", 
+    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1751204348/Screenshot_2025-06-28_165809_dfvbpd.png",
     tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "RESTful API", "Pandas", "Cloudinary", "Numpy", "ML"],
     category: "machine learning",
     github: "https://github.com/mehtahrishi/Codotech/tree/main/Music-Player-App",

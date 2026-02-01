@@ -27,12 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, darkMode }) => {
   }, []);
 
   return (
-    <section id="home" className={`h-screen flex flex-col justify-center items-center relative overflow-hidden visible pt-20 md:pt-32 transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-[#faf9f6]'}`}>
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className={`absolute top-1/4 -left-1/4 w-[40rem] h-[40rem] rounded-full blur-[160px] animate-pulse transition-colors duration-1000 ${darkMode ? 'bg-blue-900/10' : 'bg-blue-50/20'}`}></div>
-        <div className={`absolute bottom-1/4 -right-1/4 w-[40rem] h-[40rem] rounded-full blur-[160px] animate-pulse [animation-delay:2s] transition-colors duration-1000 ${darkMode ? 'bg-purple-900/10' : 'bg-orange-50/20'}`}></div>
-      </div>
+    <section id="home" className="h-screen flex flex-col justify-center items-center relative overflow-hidden visible pt-20 md:pt-32">
 
       <div
         className="text-center z-10 transition-all duration-1000 ease-out px-4 flex flex-col items-center"
