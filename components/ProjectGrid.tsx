@@ -27,7 +27,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4 flex-grow mr-8">
           <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Selected Works</span>
-          <div className="h-[1px] flex-grow bg-gray-100"></div>
+          <div className={`h-[1px] flex-grow scroll-line transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-black'}`}></div>
         </div>
 
         {/* Navigation Buttons for Desktop */}
@@ -61,15 +61,15 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
             {/* Card Content */}
             <div className="flex flex-col space-y-8">
               {/* Image Area */}
-              <div className={`relative aspect-[16/10] overflow-hidden rounded-sm transition-all duration-500 ${darkMode ? 'bg-gray-800/50' : 'bg-[#f2f1ef]'}`}>
+              <div className="relative aspect-[16/10] overflow-hidden rounded-sm transition-all duration-500 bg-transparent">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                 />
 
                 {/* Overlay on Image Hover */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
                   <a
                     href={project.webapp}
                     target="_blank"
@@ -104,11 +104,11 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
                   </span>
                 </div>
 
-                <h3 className={`text-3xl serif leading-tight transition-colors duration-300 ${darkMode ? 'text-white' : 'text-black'}`}>
+                <h3 className={`text-3xl serif leading-tight transition-colors duration-300 ${darkMode ? 'text-orange-200' : 'text-orange-900'}`}>
                   {project.title}
                 </h3>
 
-                <p className={`text-sm leading-relaxed line-clamp-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className={`text-sm leading-relaxed line-clamp-3 ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
                   {project.description}
                 </p>
 

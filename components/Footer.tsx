@@ -9,12 +9,12 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onNavigate, darkMode }) => {
   return (
-    <footer id="contact" className={`px-6 md:px-12 py-32 border-t transition-colors duration-300 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-[#faf9f6] border-gray-100'}`}>
+    <footer id="contact" className={`px-6 md:px-12 pt-12 pb-8 border-t transition-colors duration-300 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-[#faf9f6] border-gray-100'}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-8">
           <div className="md:col-span-2 space-y-6">
-            <div className={`text-3xl font-bold tracking-tighter serif uppercase ${darkMode ? 'text-white' : 'text-black'}`}>{Bio.name.split(' ')[0]}</div>
-            <p className={`text-sm font-light max-w-xs leading-relaxed ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+            <div className={`text-xl font-bold tracking-[0.2em] serif uppercase ${darkMode ? 'text-white' : 'text-black'}`}>{Bio.name.split(' ')[0]}</div>
+            <p className={`text-sm font-light max-w-xs leading-relaxed ${darkMode ? 'text-gray-500' : 'text-gray-800'}`}>
               Engineering high-availability solutions with precision. Delivering innovation across the stack.
             </p>
           </div>
@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, darkMode }) => {
           <div className="space-y-6">
             <h5 className={`text-[10px] uppercase tracking-[0.3em] font-bold ${darkMode ? 'text-white' : 'text-black'}`}>Inquiries</h5>
             <div className={`text-xs tracking-widest leading-loose flex flex-col space-y-2 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>
-              <a href={Bio.Mail} className={`hover:underline transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>
+              <a href={Bio.Mail} className={`hover:underline transition-colors ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-900 hover:text-black'}`}>
                 {Bio.Mail.replace('mailto:', '')}
               </a>
               <a href="tel:9892090398" className={`hover:underline transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>
@@ -43,8 +43,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, darkMode }) => {
           </div>
         </div>
 
-        <div className={`flex flex-col md:flex-row justify-between items-center border-t pt-12 text-[10px] uppercase tracking-[0.3em] font-medium ${darkMode ? 'border-gray-800 text-gray-600' : 'border-gray-100 text-gray-300'}`}>
-          <div>© 2026 {Bio.name}. Built with focus.</div>
+        <div className={`flex flex-col md:flex-row justify-between items-center border-t pt-12 text-[10px] uppercase tracking-[0.3em] font-medium ${darkMode ? 'border-gray-800 text-gray-400' : 'border-gray-100 text-gray-800'}`}>
+          <div>© 2026 <span className={`${darkMode ? 'text-orange-200' : 'text-orange-900'}`}>{Bio.name}</span>. Built with focus.</div>
           <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-8">
             <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>LinkedIn</a>
             <a href={Bio.github} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>GitHub</a>

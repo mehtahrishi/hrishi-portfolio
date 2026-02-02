@@ -11,7 +11,7 @@ const Volunteer: React.FC<VolunteerProps> = ({ darkMode }) => {
     <div className="space-y-16">
       <div className="flex items-center space-x-4">
         <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Social Impact</span>
-        <div className="h-[1px] flex-grow bg-gray-100"></div>
+        <div className={`h-[1px] flex-grow scroll-line transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-black'}`}></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -27,7 +27,7 @@ const Volunteer: React.FC<VolunteerProps> = ({ darkMode }) => {
 
               <div className="space-y-2">
                 <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-semibold">{item.organization}</h4>
-                <h3 className={`text-xl serif leading-tight transition-colors ${darkMode ? 'text-white group-hover:text-gray-300' : 'text-black group-hover:text-gray-600'}`}>{item.role}</h3>
+                <h3 className={`text-xl serif leading-tight transition-colors ${darkMode ? 'text-orange-200 group-hover:text-orange-100' : 'text-orange-900 group-hover:text-orange-800'}`}>{item.role}</h3>
               </div>
 
               <p className={`text-sm leading-relaxed transition-colors ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>

@@ -11,9 +11,9 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode = false }) => {
     <div className="space-y-16">
       <div className="flex items-center space-x-4">
         <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Chronicle</span>
-        <div className="h-[1px] flex-grow bg-gray-100"></div>
+        <div className={`h-[1px] flex-grow scroll-line transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-black'}`}></div>
       </div>
-      
+
       <div className="space-y-20">
         {experiences.map((exp) => (
           <div key={exp.id} className="grid grid-cols-1 md:grid-cols-12 gap-8 group">
@@ -21,18 +21,25 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode = false }) => {
               <div className="text-xs uppercase tracking-widest text-gray-400 pt-1">{exp.date}</div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center p-2 grayscale group-hover:grayscale-0 transition-all duration-700 flex-shrink-0">
-                  <img src={exp.img} alt={exp.company} className="max-w-full max-h-full object-contain" />
+                  <img
+                    src={exp.img}
+                    alt={exp.company}
+                    className="max-w-full max-h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(exp.company)}&background=random&color=fff&size=128&bold=true`;
+                    }}
+                  />
                 </div>
                 <span className={`text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{exp.company}</span>
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between">
-                <h3 className="text-2xl serif transition-all duration-300">
+                <h3 className={`text-2xl serif transition-all duration-300 ${darkMode ? 'text-orange-200' : 'text-orange-900'}`}>
                   {exp.role}
                 </h3>
               </div>
-              <p className={`font-light leading-relaxed max-w-2xl ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+              <p className={`font-light leading-relaxed max-w-2xl ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
                 {exp.desc}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">

@@ -14,7 +14,7 @@ import Volunteer from './components/Volunteer';
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [resumeSidebarOpen, setResumeSidebarOpen] = useState(false);
   const [activeResume, setActiveResume] = useState<'sd' | 'aiml' | null>(null);
   const mainRef = useRef<HTMLDivElement>(null);
@@ -59,6 +59,8 @@ const App: React.FC = () => {
     }
   };
 
+  const aboutText = `"As a highly adaptable and results-driven professional, I bring a robust blend of expertise in Full-stack Development, Cloud DevOps Engineering and AI/ML Engineering. My core focus is on architecting, building, and securing high-quality, scalable applications and secure infrastructure that drive innovation and deliver tangible business value."`;
+
   return (
     <div className={`min-h-screen selection:bg-black selection:text-white transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#faf9f6] text-black'}`}>
       {/* Navigation - Fixed at the very top */}
@@ -77,10 +79,10 @@ const App: React.FC = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleAnchorClick(e, link.href)}
-              className={`group relative text-[10px] uppercase tracking-[0.3em] transition-colors font-semibold ${darkMode ? 'hover:text-gray-400' : 'hover:text-gray-400'}`}
+              className={`group relative text-[10px] uppercase tracking-[0.3em] transition-colors font-semibold ${darkMode ? 'hover:text-orange-100' : 'hover:text-orange-900'}`}
             >
               {link.name}
-              <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${darkMode ? 'bg-white' : 'bg-black'}`}></span>
+              <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${darkMode ? 'bg-orange-200' : 'bg-orange-900'}`}></span>
             </a>
           ))}
           <a
@@ -105,7 +107,6 @@ const App: React.FC = () => {
         </button>
       </nav>
 
-      {/* Dark Mode Toggle - Bulb Icon at bottom of navbar */}
       {/* Dark Mode Toggle - Hanging Bulb */}
       <div className="fixed top-0 right-12 z-[70] flex flex-col items-center">
         {/* Wire */}
@@ -160,8 +161,8 @@ const App: React.FC = () => {
             <div className="space-y-10">
               <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Professional Profile</span>
               <h2 className="text-5xl md:text-6xl serif leading-[1.1]">Architecting <span className="italic">Quality</span> through Adaptability.</h2>
-              <p className="text-xl text-gray-600 leading-relaxed font-light italic">
-                "As a highly adaptable and results-driven professional, I bring a robust blend of expertise in Full-stack Development, Cloud DevOps Engineering, Software Testing, Cyber Security Enthusiast and AI/ML Engineering. My core focus is on architecting, building, and securing high-quality, scalable applications and secure infrastructure that drive innovation and deliver tangible business value."
+              <p className={`text-xl leading-relaxed font-light italic ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
+                "As a highly adaptable and results-driven professional, I bring a robust blend of expertise in <span className={`${darkMode ? 'text-orange-200' : 'text-orange-800'} font-normal`}>Full-stack Development</span>, <span className={`${darkMode ? 'text-orange-200' : 'text-orange-800'} font-normal`}>Cloud DevOps Engineering</span> and <span className={`${darkMode ? 'text-orange-200' : 'text-orange-800'} font-normal`}>AI/ML Engineering</span>. My core focus is on architecting, building, and securing <span className="animate-inline-underline">high-quality, scalable applications</span> and <span className="animate-inline-underline">secure infrastructure</span> that drive innovation and deliver tangible business value."
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button
@@ -204,7 +205,7 @@ const App: React.FC = () => {
         </section>
 
         <section id="skills" className="scroll-mt-32">
-          <Skills />
+          <Skills darkMode={darkMode} />
         </section>
 
         <section id="education" className="scroll-mt-32">
