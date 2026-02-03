@@ -152,17 +152,54 @@
       /* Animation */
       animation: inline-underline-loop 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
+
+    /* Smooth Theme Transitions */
+    body,
+    div,
+    section,
+    nav,
+    header,
+    footer,
+    a,
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button,
+    svg,
+    path {
+      transition-property: background-color, border-color, color, fill, stroke;
+      transition-duration: 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    /* Optimization for section scrolling */
+    section {
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+    }
+
+    /* Optimization for grain effect */
+    .grain {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
   </style>
-  <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
+
+  <script type="importmap"> {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+          "react/": "https://esm.sh/react@^19.2.4/",
+          "react": "https://esm.sh/react@^19.2.4",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+      }
+    }
+
+    </script>
   <link rel="stylesheet" href="/index.css">
 </head>
 

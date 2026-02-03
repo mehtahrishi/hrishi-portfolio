@@ -24,10 +24,19 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
     <div className="space-y-12">
       {/* Header & Controls */}
       {/* Header & Controls */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4 flex-grow mr-8">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400">Selected Works</span>
+      {/* Header & Controls */}
+      {/* Header & Controls */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        {/* Title Area */}
+        <div className="flex items-center space-x-4 flex-grow mr-0 md:mr-8 w-full">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 whitespace-nowrap">Selected Works</span>
+
           <div className={`h-[1px] flex-grow scroll-line transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-black'}`}></div>
+
+          {/* Mobile Swipe Hint - Inline after line */}
+          <span className={`md:hidden text-[9px] uppercase tracking-widest animate-pulse whitespace-nowrap ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+            Swipe &gt;&gt;
+          </span>
         </div>
 
         {/* Navigation Buttons for Desktop */}

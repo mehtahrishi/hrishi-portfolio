@@ -64,7 +64,7 @@ const App: React.FC = () => {
   return (
     <div className={`min-h-screen selection:bg-black selection:text-white transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#faf9f6] text-black'}`}>
       {/* Navigation - Fixed at the very top */}
-      <nav className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 px-6 md:px-12 py-5 flex justify-between items-center ${scrolled
+      <nav className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 px-6 md:px-12 py-5 flex justify-between items-center ${scrolled
         ? darkMode
           ? 'bg-gray-900/80 backend-blur-md border-b border-gray-800 shadow-sm'
           : 'glass py-3 border-b border-gray-100 shadow-sm'
