@@ -66,7 +66,7 @@
     section {
       opacity: 0;
       transform: translateY(20px);
-      transition: all 1s ease-out;
+      transition: all 0.6s ease-out;
     }
 
     section.visible {
@@ -77,7 +77,7 @@
     .scroll-line {
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     section.visible .scroll-line {
@@ -166,7 +166,7 @@
   <link rel="stylesheet" href="/index.css">
 </head>
 
-<body class="bg-[#faf9f6] text-[#1a1a1a] antialiased">
+<body class="bg-[#faf9f6] text-[#1a1a1a] antialiased overflow-x-hidden">
   <div class="grain"></div>
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
