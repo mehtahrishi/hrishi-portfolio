@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { projects, Bio } from '../constants';
 
 interface ProjectGridProps {
@@ -9,6 +9,7 @@ interface ProjectGridProps {
 
 const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [filter, setFilter] = useState<'all' | 'web' | 'aiml'>('all');
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -20,16 +21,44 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
     }
   };
 
+  const filteredProjects = projects.filter(project => {
+    if (filter === 'all') return true;
+    if (filter === 'web') return project.category === 'web app';
+    if (filter === 'aiml') return project.category === 'machine learning';
+    return true;
+  });
+
   return (
     <div className="space-y-12">
-      {/* Header & Controls */}
-      {/* Header & Controls */}
-      {/* Header & Controls */}
       {/* Header & Controls */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         {/* Title Area */}
         <div className="flex items-center space-x-4 flex-grow mr-0 md:mr-8 w-full">
           <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 whitespace-nowrap">Selected Works</span>
+
+          {/* Filters */}
+          <div className="flex items-center gap-3 ml-4">
+            <button
+              onClick={() => setFilter('all')}
+              className={`text-[9px] uppercase tracking-widest transition-colors ${filter === 'all' ? (darkMode ? 'text-orange-200 font-bold' : 'text-orange-900 font-bold') : 'text-gray-500 hover:text-gray-400'}`}
+            >
+              All
+            </button>
+            <span className="text-gray-600 text-[9px]">\</span>
+            <button
+              onClick={() => setFilter('web')}
+              className={`text-[9px] uppercase tracking-widest transition-colors ${filter === 'web' ? (darkMode ? 'text-orange-200 font-bold' : 'text-orange-900 font-bold') : 'text-gray-500 hover:text-gray-400'}`}
+            >
+              Web
+            </button>
+            <span className="text-gray-600 text-[9px]">\</span>
+            <button
+              onClick={() => setFilter('aiml')}
+              className={`text-[9px] uppercase tracking-widest transition-colors ${filter === 'aiml' ? (darkMode ? 'text-orange-200 font-bold' : 'text-orange-900 font-bold') : 'text-gray-500 hover:text-gray-400'}`}
+            >
+              AI/ML
+            </button>
+          </div>
 
           <div className={`h-[1px] flex-grow scroll-line transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-black'}`}></div>
 
@@ -62,7 +91,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
         className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-12 scrollbar-none"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <div
             key={project.id}
             className="flex-none w-[90vw] md:w-[600px] snap-center group"
@@ -117,7 +146,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
                   {project.title}
                 </h3>
 
-                <p className={`text-sm leading-relaxed line-clamp-3 ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
                   {project.description}
                 </p>
 
@@ -125,7 +154,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
                   {project.tags.slice(0, 4).map(tag => (
                     <span
                       key={tag}
-                      className={`text-[9px] uppercase tracking-wider px-3 py-1.5 rounded-sm border transition-colors duration-300 ${darkMode ? 'border-gray-800 text-gray-500' : 'border-gray-200 text-gray-500'}`}
+                      className={`text-[9px] uppercase tracking-wider px-3 py-1.5 rounded-sm border transition-colors duration-300 ${darkMode ? 'border-gray-800 text-orange-200' : 'border-gray-200 text-orange-900'}`}
                     >
                       {tag}
                     </span>

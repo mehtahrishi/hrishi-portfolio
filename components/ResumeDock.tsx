@@ -24,7 +24,7 @@ const ResumeDock: React.FC<ResumeDockProps> = ({ darkMode, isOpen, setIsOpen, ac
   return (
     <>
       {/* Side Label */}
-      <div className="hidden lg:block fixed left-12 top-[60%] -translate-y-1/2 rotate-[-90deg] origin-left text-[9px] uppercase tracking-[0.6em] text-gray-400 font-medium pointer-events-none z-[60]">
+      <div className="hidden lg:block fixed left-12 top-[70%] -translate-y-1/2 rotate-[-90deg] origin-left text-[9px] uppercase tracking-[0.6em] text-gray-400 font-medium pointer-events-none z-[60]">
         Precision & Automation
       </div>
 
@@ -70,7 +70,7 @@ const ResumeDock: React.FC<ResumeDockProps> = ({ darkMode, isOpen, setIsOpen, ac
         <div className="h-full flex flex-col">
           {/* Header */}
           <div className={`flex items-center justify-between p-6 border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
-            <h3 className={`text-xl font-bold uppercase tracking-wider ${darkMode ? 'text-white' : 'text-black'}`}>
+             <h3 className={`text-2xl serif font-medium ${darkMode ? 'text-white' : 'text-black'}`}>
               {activeResume === 'sd' ? 'Software Development Resume' : 'AI/ML Engineering Resume'}
             </h3>
             <button
