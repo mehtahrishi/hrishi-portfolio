@@ -49,7 +49,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, darkMode }) => {
             <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>LinkedIn</a>
             <a href={Bio.github} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>GitHub</a>
             <a href={Bio.medium} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>Medium</a>
-            <a href={Bio.insta} target="_blank" rel="noopener noreferrer" className={`transition-colors ${darkMode ? 'hover:text-white' : 'hover:text-black'}`}>Instagram</a>
           </div>
         </div>
       </div>

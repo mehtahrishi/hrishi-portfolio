@@ -155,7 +155,7 @@ const App: React.FC = () => {
       <Hero onNavigate={handleAnchorClick} darkMode={darkMode} />
 
       {/* Main Content Flow */}
-      <main ref={mainRef} className="max-w-7xl mx-auto px-6 md:px-12 space-y-24 py-32">
+      <main ref={mainRef} className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 space-y-24 py-32 overflow-x-hidden">
         <section id="about" className="scroll-mt-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-10">
