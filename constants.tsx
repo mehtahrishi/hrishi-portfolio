@@ -290,17 +290,7 @@ export const projects = [
     github: "https://github.com/mehtahrishi/Movie_Recommendation_System",
     webapp: "https://movie-recommendation-system-twuz.onrender.com/",
   },
-  {
-    id: 3,
-    title: "Task Manager",
-    date: "April 2025",
-    description: "Developed a Task Manager application leveraging Python (Flask), uniquely integrating a Neo4j graph database for secure and efficient task storage and management. Implemented robust user authentication with Flask-Login, providing secure login and registration functionalities for personalized task management. Designed a sleek, modern user interface using HTML5, CSS (featuring Glassmorphism styling), and JavaScript for an intuitive and visually appealing experience. Enabled core functionalities including task creation, editing, and deletion, with optimized querying of tasks from Neo4j, and deployed the application on Render using Procfile for online accessibility.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746533364/Screenshot_2025-04-06_025755_nl7vzd.png",
-    tags: ["HTML5", "CSS", "JavaScript", "Flask", "Flask Login", "Render", "Neo4j", "Procfile"],
-    category: "web app",
-    github: "https://github.com/mehtahrishi/Task-App",
-    webapp: "https://task-app-hpe3.onrender.com",
-  },
+
   {
     id: 6,
     title: "Spam Detector",
@@ -312,17 +302,7 @@ export const projects = [
     github: "https://github.com/mehtahrishi/Spam-Detector",
     webapp: "https://spam-detector-myh7.onrender.com/",
   },
-  {
-    id: 7,
-    title: "Nami Voice Assistant",
-    date: "May 2025",
-    description: "Developed Nami Voice Assistant, a modern web application providing a Siri-like voice experience through integrated speech recognition and synthesis. Engineered the robust backend using Python (Flask), implementing a rule-based AI system with an AI API (e.g., OpenRouter) fallback for intelligent user input processing and response generation. Utilized HTML5, CSS, and JavaScript for a responsive and intuitive frontend, leveraging the Web Speech API for seamless voice interaction. Designed the application for efficient natural language understanding and dynamic response delivery, showcasing expertise in AI integration and user interface development.",
-    image: "https://res.cloudinary.com/dfzqhhywm/image/upload/v1746532838/image_nxnjh4.png",
-    tags: ["HTML5", "CSS", "JavaScript", "Flask", "Python", "AI API", "Web Speech API", "OpenRouter"],
-    category: "web app",
-    github: "https://github.com/mehtahrishi/Voice-Assistant-App",
-    webapp: "https://voice-assistant-app-rlyk.onrender.com/",
-  },
+-
   {
     id: 8,
     title: "Alien Interview Simulator",

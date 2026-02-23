@@ -21,7 +21,9 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate, darkMode }) => {
     }
   };
 
-  const filteredProjects = projects.filter(project => {
+  // Ensure only Project objects are included
+  const filteredProjects: import('../types').Project[] = projects.filter((project: any): project is import('../types').Project => {
+    if (!project || typeof project !== 'object' || !('category' in project)) return false;
     if (filter === 'all') return true;
     if (filter === 'web') return project.category === 'web app';
     if (filter === 'aiml') return project.category === 'machine learning';
